@@ -1,4 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
+using FriendOrganizer.DataAccess;
 using FriendOrganizer.Model;
 
 namespace FriendOrganizer.UI.Data
@@ -7,10 +10,10 @@ namespace FriendOrganizer.UI.Data
     {
         public IEnumerable<Friend> GetAll()
         {
-            yield return new Friend {FirstName = "Roberto", LastName = "Baldin"};
-            yield return new Friend { FirstName = "Bernardo", LastName = "Stefano" };
-            yield return new Friend { FirstName = "Radovan", LastName = "Slovak" };
-            yield return new Friend { FirstName = "Anca", LastName = "Roma" };
+            using (var context = new FriendOrganizerDbContext())
+            {
+                return context.Friends.AsNoTracking().ToList();
+            }
         }
     }
 }
