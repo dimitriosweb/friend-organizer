@@ -93,5 +93,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FriendOrganizer.DataAccess\FriendOrganizer.DataAccess.csproj">
+      <Project>{bfe511c8-92e0-4e95-9c9f-45f05fa106b0}</Project>
+      <Name>FriendOrganizer.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FriendOrganizer.Model\FriendOrganizer.Model.csproj">
+      <Project>{f1a767dc-9395-4176-a90e-ac2c67119878}</Project>
+      <Name>FriendOrganizer.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
