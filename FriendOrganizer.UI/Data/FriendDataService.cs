@@ -7,7 +7,7 @@ namespace FriendOrganizer.UI.Data
     {
         public IEnumerable<Friend> GetAll()
         {
-            yield return new Friend {FirstName = "Roberto", LastName = "Ferrer"};
+            yield return new Friend {FirstName = "Roberto", LastName = "Baldin"};
             yield return new Friend { FirstName = "Bernardo", LastName = "Stefano" };
             yield return new Friend { FirstName = "Radovan", LastName = "Slovak" };
             yield return new Friend { FirstName = "Anca", LastName = "Roma" };
